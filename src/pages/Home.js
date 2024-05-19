@@ -22,9 +22,12 @@ const Home = () =>{
     return (
         <div className="home">
             <div className="workouts">
-                {workouts && workouts.map((workout)=>(
+                {/* {workouts && workouts.map((workout)=>(
                     <WorkoutsDetails key={workout._id} workout={workout}/>
-                ))}
+                ))} */}
+                {workouts ? workouts.map((workout)=>(
+                    <WorkoutsDetails key={workout._id} workout={workout}/>
+                )):<div>Loading ...</div>}
             </div>
             <WorkoutForm/>
         </div>
